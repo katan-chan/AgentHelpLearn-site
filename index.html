@@ -104,6 +104,7 @@
           <li><button type="button">Mở Nâng cao để xem thông số</button></li>
           <li><button type="button">Ví dụ: số bước tìm nội dung tối đa</button></li>
         </ul>
+        <p class="luu-y">Một số mục ở đây chưa có tác dụng, trong đó có cách trả lời khi sách và nguồn ngoài khác nhau.</p>
       </div>
       <figure class="man" data-vung="246,272,495,156;246,443,210,24;247,680,990,80">
         <a href="img/thiet-lap-4.png"><img src="img/thiet-lap-4.png" width="1280" height="800" alt="Màn Tuỳ chọn xử lý: cách trả lời khi sách và nguồn ngoài khác nhau, bảng thông số nâng cao"></a>
@@ -230,30 +231,32 @@
       </figure>
     </section>
 
-    <section class="slide can-cu" data-phan="can-cu" aria-label="Căn cứ: bài tập và chấm bài">
-      <h2>Bài tập và chấm bài dựa trên nghiên cứu nào</h2>
-      <ul class="the">
-        <li><p class="app">Học bằng tự làm bài</p><a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">Roediger &amp; Karpicke 2006</a><p>Tự nhớ lại và trả lời, thay vì đọc lại.</p></li>
-        <li><p class="app">Nhận xét chỉ chỗ sai, trích sách</p><a href="https://doi.org/10.3389/fpsyg.2019.03087">Wisniewski, Zierer &amp; Hattie 2020</a><p>Phản hồi giàu thông tin thay vì chỉ khen chê hay báo đúng sai.</p></li>
-        <li><p class="app">Chấm theo thang chấm từ sách</p><a href="https://arxiv.org/abs/2310.08491">Prometheus, Kim và cộng sự 2024</a><p>Máy chấm nhận thang chấm và tài liệu tham chiếu, không chấm theo cảm nhận.</p></li>
-        <li><p class="app">Trắc nghiệm so bằng code</p><a href="https://arxiv.org/abs/2306.05685">Zheng và cộng sự 2023</a><p>AI chấm dễ cho qua đáp án toán sai, nên phần so được thì giao cho code.</p></li>
-        <li><p class="app">Code kiểm kết quả chấm</p><a href="https://library.apsce.net/index.php/ICLEA/article/view/5504">Yamauchi và cộng sự 2025</a><p>Dùng chương trình, không dùng AI, để kiểm đầu ra của AI chấm.</p></li>
-        <li><p class="app">Cần xem lại khi chưa chắc</p><a href="https://arxiv.org/abs/2305.20050">Lightman và cộng sự 2023</a><p>Có nhãn trung tính thay vì ép phán đúng hay sai.</p></li>
-      </ul>
-      <p class="chu-thich">Căn cứ thiết kế: app làm theo cách các nghiên cứu này mô tả, chưa có số đo hiệu quả riêng.</p>
+    <section class="slide can-cu bao-cao" data-phan="can-cu" aria-label="Báo cáo cơ chế hoạt động">
+      <div class="bc-chu">
+        <h2>App hoạt động thế nào, dựa trên nghiên cứu nào</h2>
+        <p class="lede">Báo cáo PDF giải thích từng harness: sơ đồ luồng, từng bước, giới hạn hôm nay, và nghiên cứu mà mỗi lựa chọn dựa vào.</p>
+        <div class="nut">
+          <a class="mo-pdf" href="bao-cao.pdf">Đọc báo cáo PDF</a>
+          <a class="nut-phu" href="bao-cao.pdf" download>Tải về</a>
+        </div>
+        <p class="chu-thich">Số đo trong báo cáo là của từng nghiên cứu, kèm điều kiện dữ liệu. App chưa có số đo hiệu quả riêng.</p>
+      </div>
+      <ol class="muc-luc">
+        <li><a href="bao-cao.pdf#page=5"><b>Toàn bộ cơ chế</b><span>Lõi gọi AI, bốn nhóm việc, bốn nguyên tắc chung</span></a></li>
+        <li><a href="bao-cao.pdf#page=9"><b>Nạp và đọc sách</b><span>Đọc trang, rút khái niệm, AI thứ hai kiểm, số trang in</span></a></li>
+        <li><a href="bao-cao.pdf#page=12"><b>Hỏi đáp có nguồn</b><span>Tìm theo bản đồ, trích nguyên văn, gỡ câu không nguồn</span></a></li>
+        <li><a href="bao-cao.pdf#page=15"><b>Chấm bài tập</b><span>Thang chấm từ sách, kiểm hai lần, Cần xem lại</span></a></li>
+        <li><a href="bao-cao.pdf#page=19"><b>Mức nắm và câu hỏi</b><span>Luật lên mức, bảy cổng lọc câu</span></a></li>
+      </ol>
     </section>
 
-    <section class="slide can-cu" data-phan="can-cu" aria-label="Căn cứ: cá nhân hoá và câu hỏi">
-      <h2>Mức nắm và câu hỏi dựa trên nghiên cứu nào</h2>
-      <ul class="the">
-        <li><p class="app">Mức nhận biết, hiểu, vận dụng</p><a href="https://doi.org/10.1207/s15430421tip4104_2">Krathwohl 2002, Bloom bản sửa đổi</a><p>Mượn các tầng nhận thức từ nhớ, hiểu tới vận dụng.</p></li>
-        <li><p class="app">Mức riêng cho từng khái niệm</p><a href="https://doi.org/10.1007/BF01099821">Corbett &amp; Anderson 1995</a><p>Cập nhật mức nắm sau mỗi lượt làm. App dùng luật cố định, không tính xác suất.</p></li>
-        <li><p class="app">Khái niệm nối nhau trên bản đồ</p><a href="https://doi.org/10.1109/ICDM.2018.00019">Chen và cộng sự 2018</a><p>Dùng quan hệ giữa các khái niệm khi theo dõi người học. App nối hai khái niệm khi bài này nhắc tới khái niệm kia, chưa phải quan hệ cần biết trước.</p></li>
-        <li><p class="app">Tiêu chí viết câu hỏi</p><a href="https://doi.org/10.1207/S15324818AME1503_5">Haladyna, Downing &amp; Rodriguez 2002</a><p>Biến quy tắc viết câu nhiều lựa chọn thành tiêu chí lọc.</p></li>
-        <li><p class="app">Máy tính tính lại phép tính</p><a href="https://docs.stack-assessment.org/en/Specialist_tools/Equivalence_reasoning/">STACK</a><p>Dùng phần mềm tính toán để kiểm biểu thức thay vì đoán.</p></li>
-        <li><p class="app">Lọc bằng luật cộng AI</p><a href="https://arxiv.org/abs/2307.08161">Moore và cộng sự 2023</a><p>Đánh giá câu bằng luật viết sẵn và bằng AI. App dùng cả hai, nối tiếp nhau.</p></li>
+    <section class="slide can-cu" data-phan="can-cu" aria-label="Xem trước báo cáo">
+      <h2>Xem trước báo cáo</h2>
+      <ul class="trang-pdf">
+        <li><a href="bao-cao.pdf#page=6"><img src="img/bao-cao-tr6.png" width="910" height="1287" loading="lazy" alt="Trang 6 của báo cáo: vòng xử lý của mọi lời gọi AI"><span>Vòng xử lý của mọi lời gọi AI</span></a></li>
+        <li><a href="bao-cao.pdf#page=15"><img src="img/bao-cao-tr15.png" width="910" height="1287" loading="lazy" alt="Trang 15 của báo cáo: sơ đồ một lượt chấm bài"><span>Một lượt chấm bài</span></a></li>
+        <li><a href="bao-cao.pdf#page=22"><img src="img/bao-cao-tr22.png" width="910" height="1287" loading="lazy" alt="Trang 22 của báo cáo: chuỗi cổng lọc câu hỏi"><span>Chuỗi cổng lọc câu hỏi</span></a></li>
       </ul>
-      <p class="chu-thich">Căn cứ thiết kế, chưa phải bằng chứng app hiệu quả.</p>
     </section>
 
   </main>

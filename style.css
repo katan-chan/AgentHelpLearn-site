@@ -146,15 +146,35 @@ h2 { font-size: clamp(26px, 3vw, 40px); line-height: 1.12; }
 
 /* Căn cứ: thẻ hai cột */
 .can-cu { display: grid; gap: 24px; align-content: safe center; }
-.the { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-.the li { padding: 18px 20px; border-radius: var(--r); background: var(--surface); border: 1px solid var(--border); min-width: 0; }
-.the .app { margin: 0 0 6px; font-size: 14px; color: var(--muted); }
-.the a { font-weight: 800; font-size: 18px; letter-spacing: -.01em; text-decoration: none; }
-.the a:hover { text-decoration: underline; }
-.the li > p:last-child { margin: 6px 0 0; font-size: 15px; }
 .chu-thich { margin: 0; font-size: 14px; color: var(--muted); }
-@media (min-width: 900px) { .the { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 600px) and (max-width: 899px) { .the { grid-template-columns: repeat(2, 1fr); } }
+.mo-pdf {
+  display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 999px;
+  background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none; white-space: nowrap;
+}
+.bc-chu .chu-thich { margin-top: 20px; max-width: 46ch; }
+/* Mục lục báo cáo: mỗi chương một dòng, bấm mở đúng trang PDF. */
+.muc-luc { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: c; }
+.muc-luc li { counter-increment: c; }
+.muc-luc a {
+  display: grid; grid-template-columns: 36px 1fr; column-gap: 12px; padding: 14px 16px;
+  border-radius: var(--r); background: var(--surface); border: 1px solid var(--border);
+  color: var(--text); text-decoration: none; transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.muc-luc a:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.muc-luc a::before { content: counter(c); grid-row: span 2; color: var(--accent); font-weight: 800; font-size: 22px; }
+.muc-luc span { color: var(--muted); font-size: 14px; }
+@media (min-width: 900px) { .bao-cao { grid-template-columns: 5fr 6fr; column-gap: 48px; align-items: center; } }
+/* Xem trước: ba trang PDF thật. */
+.trang-pdf { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; grid-template-columns: repeat(3, 1fr); }
+.trang-pdf a { display: grid; gap: 10px; color: var(--text); text-decoration: none; font-weight: 600; }
+.trang-pdf img {
+  display: block; width: 100%; height: auto; max-height: calc(100dvh - var(--thanh) - var(--nav) - 140px);
+  object-fit: contain; object-position: top; background: #fff;
+  border-radius: 8px; border: 1px solid var(--border); box-shadow: var(--shadow);
+  transition: transform .25s var(--ease);
+}
+.trang-pdf a:hover img { transform: translateY(-4px); }
+@media (max-width: 699px) { .trang-pdf { grid-template-columns: 1fr; } }
 
 /* Thanh chuyển slide */
 .dieu-huong { display: none; }
