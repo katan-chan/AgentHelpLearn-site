@@ -2,175 +2,170 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>AgentHelpLearn — học từ chính sách của bạn</title>
-  <meta name="description" content="AgentHelpLearn giúp học sinh học từ sách giáo khoa: hỏi đáp kèm số trang, bài tập chấm từng bước, theo dõi mức hiểu và bài kiểm tra kiểu đề thật.">
+  <meta name="description" content="AgentHelpLearn giúp học sinh học từ sách giáo khoa: hỏi đáp kèm số trang, bài tập có chấm, theo dõi mức nắm từng khái niệm và ngân hàng câu hỏi được lọc.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="dau">
-    <div class="khung">
-      <a class="ten" href="#muc-tieu">AgentHelpLearn</a>
-      <nav aria-label="Mục lục">
-        <a href="#muc-tieu">App để làm gì</a>
-        <a href="#luong">7 bước</a>
-        <a href="#hop-ly">Vì sao hợp lý</a>
-      </nav>
-    </div>
-  </header>
+  <main class="deck" aria-live="polite">
 
-  <main>
-    <section id="muc-tieu" class="khung">
-      <h1>Học từ chính sách của bạn, và biết mình hiểu tới đâu</h1>
-      <p class="mo-dau">AgentHelpLearn là app học tập. Bạn đưa sách giáo khoa hoặc tài liệu vào, app đọc từng trang, rồi giúp bạn hỏi, luyện bài và tự kiểm tra.</p>
-      <ul class="loi-ich">
-        <li><strong>Câu trả lời kèm số trang.</strong> App ghi rõ lấy từ trang nào. App vẫn có thể sai, nên số trang là để bạn mở sách ra tự đối chiếu.</li>
-        <li><strong>Chấm từng bước.</strong> Làm bài xong, app tìm bước sai đầu tiên chứ không chỉ báo đúng hay sai. Bài nào máy chưa kiểm được, app nói rõ.</li>
-        <li><strong>Theo dõi mình đã học tới đâu.</strong> Mỗi phần kiến thức có một mức app ghi nhận, từ “nhận biết” tới “vận dụng cao”.</li>
-        <li><strong>Câu luyện kiểu đề thật.</strong> Câu hỏi tìm từ nguồn trên mạng, được lọc theo cách ra đề của Bộ trước khi tới tay bạn.</li>
-      </ul>
-      <p class="ghi-chu">Nạp được sách và tài liệu của mọi môn.</p>
+    <section class="slide bia" id="s1" data-phan="tinh-nang" aria-label="Slide 1: Bìa">
+      <div class="chu">
+        <p class="nhan">Giới thiệu sản phẩm</p>
+        <h1>AgentHelpLearn</h1>
+        <p class="mo-dau">Học từ chính sách của bạn: hỏi đáp có số trang, làm bài có chấm, theo dõi mình đã học tới đâu.</p>
+        <p class="ghi-chu">App dùng AI nên vẫn có thể sai. Số trang đi kèm để bạn tự mở sách ra đối chiếu.</p>
+        <a class="mo-app" href="https://web-two-eta-45.vercel.app">Mở app để học thử</a>
+        <p class="ghi-chu">Tạo tài khoản cần mã mời. Bấm → hoặc vuốt sang để xem tiếp.</p>
+      </div>
     </section>
 
-    <section id="luong" class="khung">
+    <section class="slide" id="s2" data-phan="tinh-nang" aria-label="Slide 2: Luồng 7 bước">
       <h2>Dùng app qua 7 bước</h2>
-      <p class="ghi-chu">Chạm vào ảnh để xem cỡ lớn.</p>
-      <ol class="buoc">
-        <li id="buoc-1">
-          <div class="chu">
-            <h3>Đưa sách vào</h3>
-            <p>Ở màn <b>Tài liệu</b>, tải lên tệp PDF sách giáo khoa hoặc tài liệu thầy cô phát.</p>
-          </div>
-          <figure><a href="img/buoc-1.png"><img src="img/buoc-1.png" width="1280" height="800" alt="Màn Tài liệu: danh sách sách đã tải lên"></a></figure>
-        </li>
-        <li id="buoc-2">
-          <div class="chu">
-            <h3>Để app đọc tài liệu</h3>
-            <p>Ở màn <b>Xử lý tài liệu</b>, app đọc từng trang, ghi lại các ý chính và khái niệm, kèm số trang nơi mỗi ý xuất hiện.</p>
-          </div>
-          <figure><a href="img/buoc-2.png"><img src="img/buoc-2.png" width="1280" height="800" loading="lazy" alt="Màn Xử lý tài liệu: chọn tài liệu để app đọc"></a></figure>
-        </li>
-        <li id="buoc-3">
-          <div class="chu">
-            <h3>Hỏi từ sách</h3>
-            <p>Ở màn <b>Hỏi</b>, gõ câu hỏi bằng lời của bạn. Câu trả lời ghi rõ lấy từ trang nào để bạn mở sách kiểm lại.</p>
-          </div>
-          <figure><a href="img/buoc-3.png"><img src="img/buoc-3.png" width="1280" height="800" loading="lazy" alt="Màn Hỏi: câu trả lời kèm số trang sách"></a></figure>
-        </li>
-        <li id="buoc-4">
-          <div class="chu">
-            <h3>Xem bản đồ kiến thức</h3>
-            <p>Ở màn <b>Graph</b>, các khái niệm nối với nhau, cho thấy muốn hiểu ý này thì nên nắm ý nào trước.</p>
-          </div>
-          <figure><a href="img/buoc-4.png"><img src="img/buoc-4.png" width="1280" height="800" loading="lazy" alt="Màn Graph: bản đồ các khái niệm nối với nhau"></a></figure>
-        </li>
-        <li id="buoc-5">
-          <div class="chu">
-            <h3>Làm bài tập</h3>
-            <p>Ở màn <b>Bài tập</b>, viết lời giải từng dòng. App chấm đáp số và từng bước, chỉ ra bước sai đầu tiên.</p>
-          </div>
-          <figure><a href="img/buoc-5.png"><img src="img/buoc-5.png" width="1280" height="800" loading="lazy" alt="Màn Bài tập: bài đã chấm, đánh dấu từng bước"></a></figure>
-        </li>
-        <li id="buoc-6">
-          <div class="chu">
-            <h3>Xem mức hiểu</h3>
-            <p>Ở màn <b>Cá nhân hoá</b>, mỗi khái niệm có một mức từ 0 đến 4: chưa chạm, nhận biết, hiểu, vận dụng, vận dụng cao. Mức tăng dần theo việc bạn làm trong app, như hỏi về khái niệm đó hay giải đúng bài. Bạn cũng tự đặt mức được. App gợi ý phần nên học tiếp.</p>
-          </div>
-          <figure><a href="img/buoc-6.png"><img src="img/buoc-6.png" width="1280" height="800" loading="lazy" alt="Màn Cá nhân hoá: mức nắm của từng khái niệm"></a></figure>
-        </li>
-        <li id="buoc-7">
-          <div class="chu">
-            <h3>Thêm câu luyện kiểu đề thật</h3>
-            <p>Ở màn <b>Ngân hàng câu hỏi</b>, chọn môn, chương hay khái niệm. App tìm thêm câu trên mạng hoặc tự soạn, lọc từng câu rồi mới đưa vào ngân hàng câu của khái niệm đó. Mỗi câu ghi rõ nguồn.</p>
-          </div>
-          <figure><a href="img/buoc-7.png"><img src="img/buoc-7.png" width="1280" height="800" loading="lazy" alt="Màn Ngân hàng câu hỏi: chọn môn, chương, khái niệm để thêm câu"></a></figure>
-        </li>
+      <ol class="luong">
+        <li><a href="#3"><b>Tài liệu</b><span>Đưa sách PDF vào</span></a></li>
+        <li><a href="#4"><b>Xử lý tài liệu</b><span>AI đọc từng trang, rút ra khái niệm</span></a></li>
+        <li><a href="#5"><b>Hỏi</b><span>Hỏi đáp kèm số trang sách</span></a></li>
+        <li><a href="#6"><b>Graph</b><span>Bản đồ các khái niệm nối nhau</span></a></li>
+        <li><a href="#7"><b>Bài tập</b><span>Làm bài và được chấm</span></a></li>
+        <li><a href="#8"><b>Cá nhân hoá</b><span>Mức nắm từng khái niệm, gợi ý học tiếp</span></a></li>
+        <li><a href="#9"><b>Ngân hàng câu hỏi</b><span>Thêm câu từ mạng, qua bộ lọc</span></a></li>
       </ol>
     </section>
 
-    <section id="hop-ly" class="khung">
-      <h2>Vì sao cách học này hợp lý?</h2>
-      <p>Mỗi cách làm dưới đây đều dựa trên nghiên cứu đã công bố. Bấm vào từng mục để xem nguồn, mức tin cậy và chỗ còn đang kiểm.</p>
-      <p class="gioi-han"><strong>Cần nói rõ:</strong> các nghiên cứu này đo trên học sinh, sinh viên và hệ thống khác, phần lớn bằng tiếng Anh. Chưa nghiên cứu nào đo riêng AgentHelpLearn. Chúng cho thấy cách làm có cơ sở, không thay cho việc đo trên chính app.</p>
-      <p class="ghi-chu">Mức tin cậy: <b>mạnh</b> là tổng hợp nhiều nghiên cứu hoặc thử nghiệm lớn; <b>vừa</b> là nghiên cứu tốt nhưng bối cảnh khác; <b>yếu</b> là mẫu nhỏ. Cỡ hiệu ứng g hay d cho biết nhóm học theo cách đó hơn nhóm so sánh bao nhiêu: khoảng 0,2 là nhỏ, 0,5 là vừa, 0,8 là lớn.</p>
-
-      <div class="tru">
-        <h3>Bài tập và chấm bài tự động</h3>
-
-        <div class="luan-diem">
-          <p><strong>Học bằng làm bài, không chỉ đọc.</strong> Phần kiến thức nào cũng có bài để bạn tự làm.</p>
-          <details>
-            <summary>Xem bằng chứng về luyện bằng làm bài</summary>
-            <p>Tổng hợp 222 nghiên cứu trong lớp học thật, với 48.478 học sinh: làm bài kiểm tra nhỏ giúp nhớ lâu hơn đọc lại, g = 0,499 (<a href="https://doi.org/10.1037/bul0000309">Yang và cộng sự 2021</a>). <span class="muc">Mạnh.</span></p>
-            <p><b>Đang kiểm:</b> có ý kiến cho rằng hiệu quả này giảm khi bài nhiều bước phức tạp (<a href="https://doi.org/10.1007/s10648-015-9310-x">van Gog &amp; Sweller 2015</a>). Điều này còn tranh cãi.</p>
-          </details>
-        </div>
-
-        <div class="luan-diem">
-          <p><strong>Nhận xét cụ thể, không chỉ báo đúng sai.</strong> App nói bạn sai ở đâu và vì sao.</p>
-          <details>
-            <summary>Xem bằng chứng về phản hồi chi tiết</summary>
-            <p>Phản hồi giàu thông tin có cỡ hiệu ứng d = 0,99, khen hay chê đơn thuần chỉ 0,24 (<a href="https://doi.org/10.3389/fpsyg.2019.03087">Wisniewski và cộng sự 2020</a>). Khi học trên máy tính, phản hồi chi tiết đạt 0,49, chỉ báo đúng sai đạt 0,05 (<a href="https://doi.org/10.3102/0034654314564881">Van der Kleij và cộng sự 2015</a>). <span class="muc">Mạnh.</span></p>
-          </details>
-        </div>
-
-        <div class="luan-diem">
-          <p><strong>Chấm từng bước, không chỉ đáp số.</strong> Bài chỉ được tính đúng khi đáp số đúng và mọi bước đều đúng.</p>
-          <details>
-            <summary>Xem bằng chứng về chấm từng bước</summary>
-            <p>Trong một bộ thử lớn, lời giải có đáp số đúng nhưng có bước sai chiếm 18,8% ở bộ bài MATH và 51,8% ở bộ bài Omni-MATH (<a href="https://arxiv.org/abs/2412.06559">Zheng và cộng sự 2025</a>). Chỉ chấm đáp số sẽ bỏ sót các bước sai này. <span class="muc">Vừa.</span></p>
-            <p><b>Đang kiểm:</b> chưa có định nghĩa chuẩn cho “một bước”. Máy chưa tự kiểm được phương trình lượng giác và phần lớn bài hình học. Gặp bài như vậy, app báo “chưa kiểm được” thay vì đoán.</p>
-          </details>
-        </div>
-
-        <div class="luan-diem">
-          <p><strong>Đáp số được so bằng phép tính, lời giải được so với lời giải mẫu.</strong> Phần nào tính được thì máy tính kiểm; phần lời thì chấm với lời giải mẫu kèm theo.</p>
-          <details>
-            <summary>Xem bằng chứng về chấm có đáp án</summary>
-            <p>AI chấm không có đáp án cho qua đáp số toán sai ở 14 trên 20 ca; có đáp án tham chiếu thì còn 15% (<a href="https://arxiv.org/abs/2306.05685">Zheng và cộng sự 2023</a>). Đưa lời giải mẫu cho máy chấm GPT-3.5 thì điểm F1 khi phán cả bài đúng hay sai tăng từ 0,59 lên 0,97, còn khi tìm từng bước sai chỉ tăng từ 0,42 lên 0,61. Điểm F1 bằng 1 là không bỏ sót và không báo nhầm (<a href="https://arxiv.org/abs/2407.09136">Daheim và cộng sự 2024</a>). <span class="muc">Vừa.</span></p>
-            <p><b>Đang kiểm:</b> chưa nghiên cứu nào đo máy chấm khớp với giáo viên tới đâu trên bài toán tiếng Việt.</p>
-          </details>
-        </div>
-      </div>
-
-      <div class="tru">
-        <h3>Cá nhân hoá, đo mức hiểu và câu hỏi từ mạng</h3>
-
-        <div class="luan-diem">
-          <p><strong>Thang mức nắm theo khung đánh giá quen thuộc.</strong> Các mức nhận biết, hiểu, vận dụng mượn cách thầy cô vẫn phân loại câu hỏi. Máy chỉ đưa bạn lên mức vận dụng khi có bài tự làm được chấm đúng.</p>
-          <details>
-            <summary>Xem bằng chứng về thang mức nắm</summary>
-            <p>Thang Bloom bản sửa đổi xếp “giải thích” vào mức hiểu, còn “dùng một cách làm trong tình huống cụ thể” là vận dụng (<a href="https://doi.org/10.1207/s15430421tip4104_2">Krathwohl 2002</a>). <span class="muc">Mạnh.</span> Thang SOLO phân biệt nắm từng ý rời với nối được các ý thành một khối (<a href="https://doi.org/10.1016/C2013-0-10375-3">Biggs &amp; Collis 1982</a>). <span class="muc">Vừa.</span></p>
-            <p><b>Đang kiểm:</b> việc ghép bốn mức với Bloom và SOLO là suy luận thiết kế của nhóm, chưa có văn bản chính thức nào làm vậy. Công văn 7991/BGDĐT-GDTrH (2024) dùng ba mức. Bậc cao nhất hiện gần với “nối các ý đã học” hơn là “giải quyết vấn đề mới”. Vì vậy, hãy xem mức này là nhật ký những gì bạn đã làm, chưa phải phép đo sự hiểu.</p>
-          </details>
-        </div>
-
-        <div class="luan-diem">
-          <p><strong>Đang làm: đòi bạn tự giải thích.</strong> Hiện mức “hiểu” chưa đòi bạn giải thích bằng lời của mình. Nhóm đang xây phần chấm lời tự giải thích để mức này đo đúng hơn.</p>
-          <details>
-            <summary>Xem vì sao chọn hướng này, và chỗ còn thiếu</summary>
-            <p>Tự giải thích giúp học, g = 0,55 (<a href="https://doi.org/10.1007/s10648-018-9434-x">Bisra và cộng sự 2018</a>). <span class="muc">Mạnh.</span></p>
-            <p>Máy chấm lời tự giải thích bài toán lớp 8 khớp với người ở mức κ ≈ 0,63, trong khi hai người chấm khớp nhau ở 0,67. Chỉ số κ bằng 1 là khớp hoàn toàn (<a href="https://library.apsce.net/index.php/ICLEA/article/view/5504">Yamauchi và cộng sự 2025</a>). <span class="muc">Yếu, 12 bài.</span> Với bài giải tích là 0,68 so với 0,70 giữa hai người (<a href="https://arxiv.org/abs/2604.00142">Chen và cộng sự 2026</a>). <span class="muc">Vừa.</span></p>
-            <p><b>Đang kiểm:</b> mức “nắm từng ý rời” khó chấm nhất: trong một thử nghiệm, máy không xếp đúng bài nào ở mức này (<a href="https://doi.org/10.1145/3641555.3705125">Zhang và cộng sự 2025</a>). Chưa ai đo trên tiếng Việt.</p>
-            <p><b>Chỗ app còn thiếu:</b> mức không bao giờ giảm, kể cả khi bạn lâu không ôn, nên app chưa đo được bạn còn nhớ hay không. Mức bạn tự đặt và mức máy ghi đang nằm chung một chỗ.</p>
-          </details>
-        </div>
-
-        <div class="luan-diem">
-          <p><strong>Câu hỏi từ mạng phải qua bộ lọc trước khi tới tay bạn.</strong> Mỗi câu tìm được đều được kiểm theo một bộ tiêu chí về khuôn đề, đáp án và cách viết câu. Câu chỉ lệch nhẹ vẫn vào ngân hàng nhưng kèm cảnh báo. Câu đáng ngờ được đưa sang chờ người soát, không bị loại oan.</p>
-          <details>
-            <summary>Xem căn cứ của bộ lọc câu hỏi</summary>
-            <p>Khuôn đề theo Quyết định 764/QĐ-BGDĐT (2024) về cấu trúc đề thi tốt nghiệp THPT từ năm 2025. Ví dụ môn Toán có 12 câu nhiều lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn. Yêu cầu chung của đề theo Thông tư 24/2024/TT-BGDĐT, Điều 5. Quy tắc viết câu nhiều lựa chọn theo <a href="https://doi.org/10.1207/S15324818AME1503_5">Haladyna và cộng sự 2002</a>. <span class="muc">Mạnh.</span> Câu viết lỗi làm sai lệch điểm của người thi (<a href="https://pubmed.ncbi.nlm.nih.gov/16078098/">Downing 2005</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/18230093/">Tarrant &amp; Ware 2008</a>). <span class="muc">Yếu: mới đọc tóm tắt.</span></p>
-            <p><b>Đang kiểm:</b> tiêu chí đang được hiệu chỉnh trên đề sách giáo khoa và đề tốt nghiệp 2025 của Bộ. Trong lúc đó, bộ lọc chưa tự loại câu nào, chỉ đẩy câu đáng ngờ sang chờ soát. Một bộ 110 câu mẫu có nhãn đã được duyệt để đo bộ lọc. Tiêu chí riêng cho Lí và Hóa đã viết nhưng chưa bật.</p>
-          </details>
-        </div>
-      </div>
+    <section class="slide co-anh" id="s3" data-phan="tinh-nang" aria-label="Slide 3: Tài liệu">
+      <h2><span class="so">1</span> Tài liệu</h2>
+      <figure><a href="img/buoc-1.png"><img src="img/buoc-1.png" width="1280" height="800" alt="Màn Tài liệu: ô tải PDF và danh sách tài liệu đã xử lý"></a></figure>
+      <ul class="y">
+        <li>Chọn hoặc kéo thả tệp PDF: sách giáo khoa, bài giảng của thầy cô. Tệp không phải PDF bị từ chối.</li>
+        <li>Tải xong, bấm <b>Tiếp tục xử lý</b> để sang bước đọc sách.</li>
+        <li>Danh sách cho biết tài liệu nào đã xử lý và đã lưu bao nhiêu trang.</li>
+        <li>Mỗi tài liệu có ba nút: <b>Xử lý lại</b>, <b>Xem trang</b> để xem từng trang gốc, và <b>Xoá</b>.</li>
+        <li>Xoá là xoá hẳn, không khôi phục được. App báo trước số trang sẽ mất.</li>
+      </ul>
     </section>
 
-    <section id="mo-app" class="khung cuoi">
-      <a class="mo-app" href="https://web-two-eta-45.vercel.app">Mở app để học thử</a>
-      <p>Đăng nhập để bắt đầu.</p>
+    <section class="slide co-anh" id="s4" data-phan="tinh-nang" aria-label="Slide 4: Xử lý tài liệu">
+      <h2><span class="so">2</span> Xử lý tài liệu</h2>
+      <figure><a href="img/buoc-2.png"><img src="img/buoc-2.png" width="1280" height="800" alt="Màn Xử lý tài liệu: chọn tài liệu và bắt đầu xử lý"></a></figure>
+      <ul class="y">
+        <li>Chọn tài liệu rồi bấm <b>Bắt đầu xử lý</b>. Có nút dừng giữa chừng.</li>
+        <li>Trước tiên, AI xem các trang đầu và cuối sách để tìm mục lục, rồi chia sách thành chương và bài.</li>
+        <li>Với từng bài, AI đọc mọi trang, cả chữ lẫn hình, rồi rút ra các khái niệm. Mỗi khái niệm ghi kèm trang trong sách.</li>
+        <li>Một lượt AI khác kiểm lại mỗi khái niệm bằng bốn câu hỏi: có đúng là khái niệm không, có thật trong sách không, đã đủ ý chưa, tên đã đúng chưa.</li>
+        <li>Cuối cùng, mọi khái niệm được xếp vào Môn › Lĩnh vực › Chương.</li>
+        <li>Mục <b>Nâng cao</b> cho xử lý riêng một chương và ước chi phí AI trước khi chạy.</li>
+      </ul>
     </section>
+
+    <section class="slide co-anh" id="s5" data-phan="tinh-nang" aria-label="Slide 5: Hỏi">
+      <h2><span class="so">3</span> Hỏi</h2>
+      <figure><a href="img/buoc-3.png"><img src="img/buoc-3.png" width="1280" height="800" alt="Màn Hỏi: câu trả lời kèm ảnh trang sách và nguồn trang in 6"></a></figure>
+      <ul class="y">
+        <li>Gõ câu hỏi bằng lời của bạn. Chọn chế độ <b>Nhanh</b> hoặc <b>Mạnh</b>; Mạnh dành cho câu khó và tốn chi phí AI hơn.</li>
+        <li>Chưa biết hỏi gì thì chọn một lối vào: Hiểu một khái niệm, Ôn lại điều đã học, Luyện qua ví dụ, Chưa biết bắt đầu.</li>
+        <li>App tìm các khái niệm gần với câu hỏi, đi theo liên kết trên bản đồ kiến thức để gom ý từ sách, rồi mới trả lời.</li>
+        <li>Mỗi câu trích được dò trên chữ của trang sách để lấy số trang. Dò không ra thì app lấy trang đầu nơi ý đó xuất hiện. Đoạn không có nguồn bị ẩn, và app báo đã ẩn mấy đoạn. Không còn nguồn nào thì app nói là không tìm thấy.</li>
+        <li>Bấm số trang để mở trang gốc; app có thể cắt sẵn hình trong trang.</li>
+        <li>Kèm phần <b>Giảng giải</b> bằng lời dễ hiểu (phần này không có trích dẫn) và tối đa ba khái niệm gợi ý học tiếp. Lịch sử hỏi được lưu lại.</li>
+      </ul>
+    </section>
+
+    <section class="slide co-anh" id="s6" data-phan="tinh-nang" aria-label="Slide 6: Graph">
+      <h2><span class="so">4</span> Graph — bản đồ kiến thức</h2>
+      <figure><a href="img/buoc-4.png"><img src="img/buoc-4.png" width="1280" height="800" alt="Màn Graph: các khái niệm gom theo Môn, Lĩnh vực, Chương"></a></figure>
+      <ul class="y">
+        <li>Mỗi chấm là một khái niệm, gom trong các vòng Môn › Lĩnh vực › Chương.</li>
+        <li>Mũi tên A → B nghĩa là bài về B có nhắc tới A, gợi ý rằng A có thể cần biết trước.</li>
+        <li>Bật <b>Độ hiểu của bạn</b>: chấm sáng dần theo mức nắm của bạn, và vùng quanh khái niệm đã học cũng sáng lên một chút.</li>
+        <li>Lọc theo môn, chương hay sách. Bấm một khái niệm để xem mức nắm, các trang liên quan và mở trang sách.</li>
+        <li>Dùng được bằng bàn phím: phím mũi tên đi sang khái niệm kề, Enter để mở.</li>
+      </ul>
+    </section>
+
+    <section class="slide co-anh" id="s7" data-phan="tinh-nang" aria-label="Slide 7: Bài tập">
+      <h2><span class="so">5</span> Bài tập</h2>
+      <figure><a href="img/buoc-5.png"><img src="img/buoc-5.png" width="1280" height="800" alt="Màn Bài tập: đề Ví dụ 1-1 trang in 6 và ô viết bài giải"></a></figure>
+      <ul class="y">
+        <li>Chọn sách và một câu: bài trong sách (Ví dụ, Luyện tập, Vận dụng) hoặc bài AI soạn thêm.</li>
+        <li>Xem lời giải của sách, hoặc lời giải AI viết (ghi rõ là chưa được kiểm tra), và ảnh trang gốc.</li>
+        <li>Viết bài giải vào ô (tự lưu, có xem trước công thức) rồi bấm <b>Chấm bài</b>.</li>
+        <li>Trước khi chấm, app dựng một thang chấm từ phần lý thuyết trong sách. Một lượt AI khác kiểm thang chấm đó.</li>
+        <li>Câu trắc nghiệm được so đáp án bằng code. Câu tự luận do AI chấm theo thang chấm, sau đó code kiểm kết quả có khớp với nhau không.</li>
+        <li>Kết quả là <b>Đúng</b>, <b>Đúng một phần</b>, <b>Chưa đúng</b>, hoặc <b>Cần xem lại</b> khi chưa đủ căn cứ. Kèm nhận xét, điểm làm tốt, chỗ cần sửa và câu trích sách có số trang.</li>
+        <li>Chưa có: chấm ảnh bài làm (ảnh được lưu nhưng chưa chấm), và kiểm từng bước bằng máy tính.</li>
+      </ul>
+    </section>
+
+    <section class="slide co-anh" id="s8" data-phan="tinh-nang" aria-label="Slide 8: Cá nhân hoá">
+      <h2><span class="so">6</span> Cá nhân hoá</h2>
+      <figure><a href="img/buoc-6.png"><img src="img/buoc-6.png" width="1280" height="800" alt="Màn Cá nhân hoá: số khái niệm đã chạm và thanh năm mức nắm"></a></figure>
+      <ul class="y">
+        <li>Mỗi khái niệm có một mức: chưa chạm, nhận biết, hiểu, vận dụng, vận dụng cao.</li>
+        <li>Mức tăng theo việc bạn làm: hỏi về khái niệm cho mức nhận biết; giải đúng bài tự luận đẩy dần lên tới vận dụng. Mỗi lần lên nhiều nhất một bậc, không nhảy bậc, không tụt, mỗi bài chỉ tính một lần.</li>
+        <li>Bạn cũng tự đặt được mức cho từng khái niệm.</li>
+        <li>Mục <b>Học tiếp</b> gợi ý tối đa sáu khái niệm nằm ngay biên những gì bạn đã học, mỗi khái niệm có nút Hỏi và Bài tập.</li>
+        <li>Tab <b>Hướng học</b>: bạn chọn học tổng hợp hay chuyên sâu một mảng. Khi đã chạm đủ tám khái niệm, app đoán hướng của bạn từ việc bạn học tập trung hay trải rộng, rồi đổi cách gợi ý.</li>
+        <li>Tab <b>Cách tính</b> giải thích các luật trên bằng lời thường.</li>
+        <li>Lưu ý: mức này là nhật ký việc bạn đã làm. Mức hiểu chưa đòi bạn tự giải thích, và mức vận dụng cao hiện chỉ tự đặt được.</li>
+      </ul>
+    </section>
+
+    <section class="slide co-anh" id="s9" data-phan="tinh-nang" aria-label="Slide 9: Ngân hàng câu hỏi">
+      <h2><span class="so">7</span> Ngân hàng câu hỏi</h2>
+      <figure><a href="img/buoc-7.png"><img src="img/buoc-7.png" width="1280" height="800" alt="Màn Ngân hàng câu hỏi, tab Tra ngân hàng: câu sách giáo khoa kèm trang in"></a></figure>
+      <ul class="y">
+        <li><b>Thêm câu:</b> chọn Môn, Lĩnh vực, Chương, Khái niệm và số câu cho mỗi khái niệm, rồi bấm <b>Tìm trên mạng</b> hoặc <b>AI tự tạo</b>. App hiện ước chi phí trước; bạn xác nhận thì mới chạy. Hiện làm cho môn Toán.</li>
+        <li>Tìm trên mạng: app tìm vài trang web cho mỗi khái niệm, lưu lại trang, rồi trích nguyên văn câu hỏi. AI tự tạo: AI soạn câu, một lượt AI khác giải lại.</li>
+        <li>Mỗi câu qua bảy bước lọc: câu từ mạng phải có thật trong trang đã lưu; không trùng câu cũ; không lạc sang khái niệm khác; máy tính tính lại các đẳng thức chỉ gồm số trong lời giải, chỗ không tính được thì bỏ qua; đúng tiêu chí viết câu và khuôn đề; một AI giải độc lập để đối chiếu đáp án; kiểm chéo với sách.</li>
+        <li>Câu đạt vào ngân hàng. Câu bị nghi nhưng chưa đủ căn cứ để loại thì sang <b>Chờ soát</b> cho người xem.</li>
+        <li><b>Tải tệp lên:</b> PDF hoặc ảnh, tối đa 20 trang. AI đọc và tách câu, đưa thẳng vào ngân hàng, không qua bộ lọc.</li>
+        <li><b>Tra ngân hàng:</b> xem câu sách kèm trang và câu ngoài kèm link nguồn; bấm Dùng hoặc Bỏ (phải ghi lý do) và gán mức độ cho từng câu.</li>
+      </ul>
+    </section>
+
+    <section class="slide can-cu" id="s10" data-phan="can-cu" aria-label="Slide 10: Căn cứ cho bài tập và chấm bài">
+      <h2>Căn cứ 1 — Bài tập và chấm bài làm giống nghiên cứu nào</h2>
+      <table>
+        <thead><tr><th>Trong app</th><th>Giống</th><th>Giống ở chỗ</th></tr></thead>
+        <tbody>
+          <tr><td>Đặt bài tập làm trung tâm, học bằng tự làm</td><td><a href="https://doi.org/10.1111/j.1467-9280.2006.01693.x">Roediger &amp; Karpicke 2006</a></td><td>Cho người học tự nhớ lại và trả lời, thay vì đọc lại tài liệu.</td></tr>
+          <tr><td>Nhận xét nêu chỗ sai, chỗ làm tốt, kèm trích sách</td><td><a href="https://doi.org/10.3389/fpsyg.2019.03087">Wisniewski, Zierer &amp; Hattie 2020</a></td><td>Tách phản hồi giàu thông tin khỏi phản hồi chỉ khen chê hay báo đúng sai; app chọn loại giàu thông tin.</td></tr>
+          <tr><td>AI chấm theo thang chấm dựng từ lý thuyết sách</td><td><a href="https://arxiv.org/abs/2310.08491">Prometheus, Kim và cộng sự 2024</a></td><td>Máy chấm được đưa thang chấm và tài liệu tham chiếu, không chấm theo cảm nhận.</td></tr>
+          <tr><td>Đáp án trắc nghiệm so bằng code, không nhờ AI</td><td><a href="https://arxiv.org/abs/2306.05685">Zheng và cộng sự 2023</a></td><td>Chỉ ra AI chấm dễ cho qua đáp án toán sai khi thiếu đáp án tham chiếu. App giảm rủi ro này bằng cách so lựa chọn với đáp án trong thang chấm bằng code; đáp án đó do AI dựng nên vẫn có thể sai.</td></tr>
+          <tr><td>Code kiểm khuôn và độ khớp của kết quả chấm</td><td><a href="https://library.apsce.net/index.php/ICLEA/article/view/5504">Yamauchi và cộng sự 2025</a></td><td>Dùng chương trình, không dùng AI, để kiểm đầu ra của AI chấm.</td></tr>
+          <tr><td>Kết quả “Cần xem lại” khi chưa đủ căn cứ</td><td><a href="https://arxiv.org/abs/2305.20050">Lightman và cộng sự 2023</a></td><td>Có nhãn trung tính cho chỗ không phán được đúng hay sai, thay vì ép phải phán.</td></tr>
+        </tbody>
+      </table>
+      <p class="ghi-chu">Đây là căn cứ thiết kế: app làm theo cách các nghiên cứu này mô tả. App chưa có số đo hiệu quả của riêng mình.</p>
+    </section>
+
+    <section class="slide can-cu" id="s11" data-phan="can-cu" aria-label="Slide 11: Căn cứ cho cá nhân hoá và ngân hàng câu hỏi">
+      <h2>Căn cứ 2 — Cá nhân hoá và ngân hàng câu hỏi giống nghiên cứu nào</h2>
+      <table>
+        <thead><tr><th>Trong app</th><th>Giống</th><th>Giống ở chỗ</th></tr></thead>
+        <tbody>
+          <tr><td>Các mức nhận biết, hiểu, vận dụng</td><td><a href="https://doi.org/10.1207/s15430421tip4104_2">Bloom bản sửa đổi, Krathwohl 2002</a></td><td>Xếp tầng nhận thức từ nhớ, hiểu tới vận dụng; app mượn các tầng này.</td></tr>
+          <tr><td>Mức nắm riêng cho từng khái niệm, cập nhật sau mỗi lần làm</td><td><a href="https://doi.org/10.1007/BF01099821">Corbett &amp; Anderson 1995</a></td><td>Theo dõi mức nắm của từng kỹ năng và cập nhật sau mỗi lượt làm bài. Khác: app dùng luật cố định, không tính xác suất.</td></tr>
+          <tr><td>Liên kết khái niệm làm sáng vùng lân cận và chọn khái niệm học tiếp</td><td><a href="https://doi.org/10.1109/ICDM.2018.00019">Chen và cộng sự 2018</a></td><td>Dùng quan hệ “cần biết trước” giữa các khái niệm khi theo dõi người học.</td></tr>
+          <tr><td>Tiêu chí viết câu hỏi trong bộ lọc</td><td><a href="https://doi.org/10.1207/S15324818AME1503_5">Haladyna, Downing &amp; Rodriguez 2002</a></td><td>Bộ quy tắc viết câu nhiều lựa chọn; app biến nhiều quy tắc thành tiêu chí lọc.</td></tr>
+          <tr><td>Khuôn đề trong bộ lọc</td><td>Quyết định 764/QĐ-BGDĐT</td><td>Kiểm câu theo khuôn đề tốt nghiệp THPT: nhiều lựa chọn, đúng/sai, trả lời ngắn.</td></tr>
+          <tr><td>Máy tính tính lại phép tính trong lời giải</td><td><a href="https://docs.stack-assessment.org/en/Specialist_tools/Equivalence_reasoning/">STACK</a></td><td>Hệ chấm toán dùng phần mềm tính toán để kiểm biểu thức, thay vì đoán.</td></tr>
+          <tr><td>Lọc câu bằng luật cộng với AI</td><td><a href="https://arxiv.org/abs/2307.08161">Moore và cộng sự 2023</a></td><td>Đánh giá chất lượng câu nhiều lựa chọn bằng luật viết sẵn và bằng AI. Paper so hai cách riêng rẽ; app dùng cả hai, nối tiếp nhau.</td></tr>
+        </tbody>
+      </table>
+      <p class="ghi-chu">Đây là căn cứ thiết kế, chưa phải bằng chứng app hiệu quả.</p>
+    </section>
+
   </main>
+
+  <nav class="dieu-huong" aria-label="Chuyển slide">
+    <button type="button" class="truoc" aria-label="Slide trước">←</button>
+    <span class="vi-tri" aria-live="polite">1 / 11</span>
+    <button type="button" class="sau" aria-label="Slide sau">→</button>
+  </nav>
+
+  <script src="slides.js"></script>
 </body>
 </html>
