@@ -46,5 +46,29 @@ document.addEventListener('touchend', (e) => {
   x0 = null
 })
 
+// Vùng sáng: figure.man[data-vung] giữ các vùng "x,y,w,h;..." trên ảnh gốc 1280x800,
+// theo thứ tự các nút trong .diem. Bấm, rê chuột hay focus nút nào thì sáng vùng đó.
+const DEM = 8 // px đệm quanh vùng, tính trên ảnh gốc
+document.querySelectorAll('.buoc').forEach((slide) => {
+  const fig = slide.querySelector('.man')
+  const den = fig.querySelector('.den')
+  const vung = fig.dataset.vung.split(';').map((v) => v.split(',').map(Number))
+  const nut = [...slide.querySelectorAll('.diem button')]
+  function chon(i) {
+    const [x, y, w, h] = vung[i]
+    Object.assign(den.style, {
+      left: `${(x - DEM) / 12.8}%`, top: `${(y - DEM) / 8}%`,
+      width: `${(w + 2 * DEM) / 12.8}%`, height: `${(h + 2 * DEM) / 8}%`,
+    })
+    nut.forEach((b, j) => b.setAttribute('aria-pressed', String(j === i)))
+  }
+  nut.forEach((b, i) => {
+    b.addEventListener('click', () => chon(i))
+    b.addEventListener('mouseenter', () => chon(i))
+    b.addEventListener('focus', () => chon(i))
+  })
+  chon(0)
+})
+
 window.addEventListener('hashchange', hien)
 hien()

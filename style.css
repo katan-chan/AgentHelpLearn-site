@@ -79,6 +79,7 @@ h2 { font-size: clamp(26px, 3vw, 40px); line-height: 1.12; }
 .mo-app:active, .nut-phu:active { transform: scale(.97); }
 .bia-anh { margin: 0; }
 .bia-anh img, .man img, .luoi img { display: block; width: 100%; height: auto; border-radius: var(--r); }
+.man a { display: block; }
 .bia-anh img { box-shadow: var(--shadow); border: 1px solid var(--border); }
 @media (min-width: 900px) {
   .bia { grid-template-columns: 5fr 7fr; align-items: center; }
@@ -113,36 +114,33 @@ h2 { font-size: clamp(26px, 3vw, 40px); line-height: 1.12; }
   display: inline-grid; place-items: center; width: 1.3em; height: 1.3em; margin-right: .4em;
   border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: .8em; vertical-align: .08em;
 }
-.diem { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 10px; counter-reset: d; }
-.diem li {
-  counter-increment: d; display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: center;
-  font-weight: 600; font-size: 16px;
+/* Danh sách thao tác: mỗi dòng là một nút; dòng đang chọn quyết định vùng sáng trên ảnh. */
+.diem { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 4px; }
+.diem button {
+  width: 100%; text-align: left; padding: 10px 14px; border: 0; border-radius: 10px;
+  background: none; color: var(--muted); font: inherit; font-size: 16px; font-weight: 600; cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background-color .25s, color .25s, border-color .25s;
 }
-.diem li::before {
-  content: counter(d); display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%;
-  background: var(--accent); color: var(--on-accent); font-size: 14px; font-weight: 800;
-}
+.diem button:hover { color: var(--text); }
+.diem button[aria-pressed="true"] { color: var(--text); background: var(--accent-soft); border-left-color: var(--accent); }
 .luu-y { margin: 20px 0 0; font-size: 14px; color: var(--muted); }
-.man { position: relative; margin: 0; width: 100%; aspect-ratio: 16 / 10; }
-.man img { border: 1px solid var(--border); box-shadow: var(--shadow); }
-.cham {
-  position: absolute; left: var(--x); top: var(--y); translate: -50% -50%;
-  display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
-  background: var(--accent); color: var(--on-accent); font-size: 14px; font-weight: 800;
-  box-shadow: 0 0 0 4px rgb(255 255 255 / .9), 0 6px 16px -4px rgb(35 60 140 / .6);
-  pointer-events: none;
-  transition: scale .2s var(--ease);
+.man {
+  position: relative; margin: 0; width: 100%; aspect-ratio: 16 / 10;
+  overflow: hidden; border-radius: var(--r); border: 1px solid var(--border); box-shadow: var(--shadow);
 }
-.buoc:has(.diem li:nth-child(1):hover) .cham:nth-of-type(1),
-.buoc:has(.diem li:nth-child(2):hover) .cham:nth-of-type(2),
-.buoc:has(.diem li:nth-child(3):hover) .cham:nth-of-type(3),
-.buoc:has(.diem li:nth-child(4):hover) .cham:nth-of-type(4) { scale: 1.35; }
+.man img { border-radius: 0; }
+/* Vùng sáng: phần ảnh ngoài vùng tối đi. Không JS thì không có vùng, ảnh hiện nguyên. */
+.den {
+  position: absolute; display: none; border-radius: 10px;
+  box-shadow: 0 0 0 2px var(--accent), 0 0 0 9999px rgb(12 16 30 / .5);
+  pointer-events: none;
+  transition: left .5s var(--ease), top .5s var(--ease), width .5s var(--ease), height .5s var(--ease);
+}
+.co-js .den { display: block; }
 @media (min-width: 900px) {
   .buoc { grid-template-columns: minmax(300px, 4fr) 8fr; gap: 48px; align-items: center; }
   .man { width: min(100%, calc((100dvh - var(--thanh) - var(--nav) - 48px) * 1.6)); justify-self: end; }
-}
-@media (max-width: 899px) {
-  .cham { width: 22px; height: 22px; font-size: 12px; box-shadow: 0 0 0 3px rgb(255 255 255 / .9); }
 }
 
 /* Căn cứ: thẻ hai cột */
@@ -181,12 +179,11 @@ h2 { font-size: clamp(26px, 3vw, 40px); line-height: 1.12; }
   .co-js .slide:not([hidden]) > * { animation: len .6s var(--ease) both; }
   .co-js .slide:not([hidden]) > :nth-child(2) { animation-delay: .08s; }
   .co-js .slide:not([hidden]) > :nth-child(3) { animation-delay: .16s; }
-  .co-js .slide:not([hidden]) .cham { animation: bat .45s var(--ease) both; animation-delay: calc(.35s + var(--i, 0) * .09s); }
-  .cham:nth-of-type(2) { --i: 1; } .cham:nth-of-type(3) { --i: 2; } .cham:nth-of-type(4) { --i: 3; }
+  .co-js .slide:not([hidden]) .den { animation: hien-den .6s var(--ease) .3s both; }
   .co-js .slide:not([hidden]) .luoi li { animation: len .5s var(--ease) both; }
   .luoi li:nth-child(2) { animation-delay: .04s !important; } .luoi li:nth-child(3) { animation-delay: .08s !important; }
   .luoi li:nth-child(4) { animation-delay: .12s !important; } .luoi li:nth-child(5) { animation-delay: .16s !important; }
   .luoi li:nth-child(6) { animation-delay: .2s !important; } .luoi li:nth-child(7) { animation-delay: .24s !important; }
 }
 @keyframes len { from { opacity: 0; transform: translateY(14px); } }
-@keyframes bat { from { opacity: 0; scale: .4; } }
+@keyframes hien-den { from { opacity: 0; } }
